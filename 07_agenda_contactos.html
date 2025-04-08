@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+       Introduce nombre:<input type="text" id="nombre"><button onclick="guardar();">Guardar</button>
+       <br><br>
+       <button onclick="mostrar();">mostrar</button>
+       <dic id="listaNombres">
+
+       </div>
+
+       <script>
+        //array donde guardamos los nombres
+             let nombres=[];
+             function guardar(){
+                let nombre=document.getElementById("nombre").value;
+                nombres.push(nombre);
+                alert("Contacto guardado");
+                
+             }
+             function mostrar(){
+                let html="";
+                for(let n of nombres){
+                    html=html+"<b>"+n+"</b><br>";
+                }
+                    document.getElementById("listaNombres").innerHTML=html;
+                }
+                    
+       </script>
+</body>
+</html>
